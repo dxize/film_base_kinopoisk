@@ -1,4 +1,4 @@
-[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+  [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
 
 D:\study_projects\film_base_kinopoisk\frontend\app\admin\page.tsx
   15:11  error    An interface declaring no members is equivalent to its supertype                                             @typescript-eslint/no-empty-object-type
