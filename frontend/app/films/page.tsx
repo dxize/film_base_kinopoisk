@@ -1,13 +1,13 @@
-export const dynamic = 'force-dynamic';
-
 import { Suspense } from 'react';
+import { connection } from 'next/server';
 import FilmsClient from './FilmsClient';
 
-export default function Page() {
+export default async function Page() {
+    await connection();
+
     return (
         <Suspense fallback={<div className="container mx-auto px-4 py-8">Loading...</div>}>
             <FilmsClient />
         </Suspense>
     );
 }
-throw new Error("FILMS PAGE UPDATED");
