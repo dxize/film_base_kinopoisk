@@ -1,41 +1,41 @@
 'use client';
 
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { ROUTES } from '@/lib/config';
 import { LoginForm } from '@/components/auth';
 
 export default function LoginPage() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4">
-      <div className="w-full max-w-md">
-        <div className="text-center mb-8">
-          <Link href={ROUTES.HOME} className="inline-flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">FB</span>
+    return (
+        <div className="min-h-screen flex items-center justify-center bg-background px-4">
+            <div className="w-full max-w-md">
+                <div className="text-center mb-8">
+                    <Link href={ROUTES.HOME} className="inline-flex items-center space-x-2">
+                        <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                            <span className="text-primary-foreground font-bold text-sm">FB</span>
+                        </div>
+                        <span className="text-2xl font-bold">Film Base</span>
+                    </Link>
+                    <p className="text-muted-foreground mt-2">Войдите в свой аккаунт</p>
+                </div>
+
+                <Suspense fallback={<div>Loading...</div>}>
+                    <LoginForm />
+                </Suspense>
+
+                <div className="mt-8 text-center">
+                    <p className="text-xs text-muted-foreground">
+                        Входя в систему, вы соглашаетесь с нашими{' '}
+                        <Link href="" className="underline hover:text-foreground">
+                            Условиями использования
+                        </Link>{' '}
+                        и{' '}
+                        <Link href="" className="underline hover:text-foreground">
+                            Политикой конфиденциальности
+                        </Link>
+                    </p>
+                </div>
             </div>
-            <span className="text-2xl font-bold">Film Base</span>
-          </Link>
-          <p className="text-muted-foreground mt-2">
-            Войдите в свой аккаунт
-          </p>
         </div>
-
-        <LoginForm />
-
-        {/* Дополнительная информация */}
-        <div className="mt-8 text-center">
-          <p className="text-xs text-muted-foreground">
-            Входя в систему, вы соглашаетесь с нашими{' '}
-            <Link href="" className="underline hover:text-foreground">
-              Условиями использования
-            </Link>{' '}
-            и{' '}
-            <Link href="" className="underline hover:text-foreground">
-              Политикой конфиденциальности
-            </Link>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
