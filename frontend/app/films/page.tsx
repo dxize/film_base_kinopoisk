@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { Suspense } from 'react';
 import FilmsClient from './FilmsClient';
 
@@ -8,3 +10,4 @@ export default function Page() {
         </Suspense>
     );
 }
+throw new Error("FILMS PAGE UPDATED");
