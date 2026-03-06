@@ -1,4 +1,4 @@
-# Film Base Kinopoisk
+# Film Base Kinopoisk - сервис для просмотра фильмов со встренным плеером 
 
 Вот само приложение на потыкать - https://filmbasekinopoisk.vercel.app/
 
